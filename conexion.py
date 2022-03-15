@@ -8,7 +8,6 @@ DB = mysql.connector.connect(
 cursor = DB.cursor()
 
 #ADMIN: insertar libros
-#7 INPUTS OBLIGATORIOS | 7 TEXTOS | 1 BOTON DE ENVIO + LIMPIADO AL ENVIAR
 def insert_libro(nom, aut, cat, prc, edi, stk, vnt):
     reg = "INSERT INTO libros(nombre, autor, categoria, precio, editorial, stock, ventas) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     cursor.execute(reg, (nom, aut, cat, prc, edi, stk, vnt))
